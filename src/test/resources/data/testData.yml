@@ -1,0 +1,27 @@
+Author:
+ - id: 1
+   firstName: Arthur Conan
+   lastName: Doyle
+   version: 0
+ - id: 2
+   firstName: John Ronald Reuel
+   lastName: Tolkien
+   version: 0
+
+Book:
+ - id: 1
+   title: The Yellow Face
+   author_id: 1
+   version: 0
+ - id: 2
+   title: The Empty House
+   author_id: 1
+   version: 0
+ - id: 3
+   title: The Lord of the Rings
+   author_id: 2
+   version: 0
+ - id: 4
+   title: The Hobbit
+   author_id: 2
+   version: 0

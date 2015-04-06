@@ -1,0 +1,44 @@
+<entity-mappings version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+    http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd">
+<sql-result-set-mapping name="AuthorMappingXml">
+    <entity-result entity-class="org.thoughts.on.java.jpa.model.Author">
+        <field-result name="id" column="authorId"/>
+        <field-result name="firstName" column="firstName"/>
+        <field-result name="lastName" column="lastName"/>
+        <field-result name="version" column="version"/>
+    </entity-result>
+</sql-result-set-mapping>
+<sql-result-set-mapping name="AuthorBookCountMappingXml">
+    <entity-result entity-class="org.thoughts.on.java.jpa.model.Author">
+        <field-result name="id" column="id"/>
+        <field-result name="firstName" column="firstName"/>
+        <field-result name="lastName" column="lastName"/>
+        <field-result name="version" column="version"/>
+    </entity-result>
+    <column-result name="bookCount" class="java.lang.Long" />
+</sql-result-set-mapping>
+<sql-result-set-mapping name="BookAuthorMappingXml">
+    <entity-result entity-class="org.thoughts.on.java.jpa.model.Author">
+        <field-result name="id" column="authorId"/>
+        <field-result name="firstName" column="firstName"/>
+        <field-result name="lastName" column="lastName"/>
+        <field-result name="version" column="authorVersion"/>
+    </entity-result>
+    <entity-result entity-class="org.thoughts.on.java.jpa.model.Book">
+        <field-result name="id" column="id"/>
+        <field-result name="title" column="title"/>
+        <field-result name="author" column="author_id"/>
+        <field-result name="version" column="version"/>
+    </entity-result>
+</sql-result-set-mapping>
+<sql-result-set-mapping name="BookValueMappingXml">
+    <constructor-result target-class="org.thoughts.on.java.jpa.value.BookValue">
+        <column name="id" class="java.lang.Long"/>
+        <column name="title"/>
+        <column name="version" class="java.lang.Long"/>
+        <column name="authorName"/>
+    </constructor-result>
+</sql-result-set-mapping>
+</entity-mappings>
